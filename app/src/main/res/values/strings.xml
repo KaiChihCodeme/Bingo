@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Bingo</string>
+    <string name="exit">Exit</string>
+    <string name="init_word">Hello! What\'s your name?</string>
+    <string name="name">Your name</string>
+    <string name="next">Next</string>
+    <string name="bingo">Bingo</string>
+    <string name="back">Back</string>
+    <string name="bingowords">Hi! %1$s, this is your %2$d time playing Bingo!</string>
+    <string name="minnumberscope">Minimum</string>
+    <string name="maxnumberscope">Maximum</string>
+    <string name="til">~</string>
+    <string name="win">Win condition</string>
+    <string name="switchs">Input / Game Mode</string>
+    <string name="enter_name">Please enter your name!</string>
+    <string name="start">Start</string>
+    <string name="complete">empty form</string>
+    <string name="range">Range：</string>
+    <string name="chooose">Choose Bingo Size</string>
+    <string name="fill_alert">Please complete above setting!</string>
+    <string name="range_alert">Range error! Max-Min must greater or equal than %1$d</string>
+    <string name="win_alert">Win condition error! Must not greater than %1$d or less than 1</string>
+    <string name="switch_on">Game mode</string>
+    <string name="switch_off">Input mode</string>
+    <string name="switch_check">Please check your bingo rule.</string>
+    <string name="random">random number</string>
+    <string name="alertdialog_title">You Win!</string>
+    <string name="alertdialog_context">You\'re connect into %1$d Line(s)!</string>
+    <string name="OK">OK</string>
+    <string name="restart">Restart</string>
+    <string name="game_mode_alert">You are on the game mode, you cannot click this button.</string>
+    <string name="switch_off_instruction">Please input the number</string>
+    <string name="swich_on_instruction">Please click your bingo number</string>
+    <string name="color">Bingo Color</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_green">Green</string>
+</resources>

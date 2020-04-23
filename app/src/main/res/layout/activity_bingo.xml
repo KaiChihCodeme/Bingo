@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BingoActivity">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="72dp"
+        android:text="@string/bingowords"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/range"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_minnumberscope"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Intro" />
+
+    <TextView
+        android:id="@+id/tv_til"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/til"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_maxnumberscope"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/et_minnumberscope"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Intro" />
+
+    <EditText
+        android:id="@+id/et_minnumberscope"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/minnumberscope"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/tv_Intro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Intro" />
+
+    <EditText
+        android:id="@+id/et_maxnumberscope"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/maxnumberscope"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/et_minnumberscope"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Intro" />
+
+    <EditText
+        android:id="@+id/et_win"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/win"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bingo_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/et_minnumberscope" />
+
+
+    <Switch
+        android:id="@+id/sw_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/switchs"
+        android:textOn="@string/switch_on"
+        android:textOff="@string/switch_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bingo_spinner" />
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/switch_off_instruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_switch" />
+
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:text="@string/complete"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/rv_bingo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_win"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <Button
+        android:id="@+id/btn_random"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:text="@string/random"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/rv_bingo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+
+        app:layout_constraintStart_toEndOf="@+id/btn_complete"
+        app:layout_constraintTop_toBottomOf="@+id/et_win"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <Spinner
+        android:id="@+id/bingo_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_minnumberscope" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bingo"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction" />
+
+    <TextView
+        android:id="@+id/tv_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/color"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_blue"
+        android:layout_width="60dp"
+        android:layout_height="34dp"
+        android:text="@string/color_blue"
+        android:textColor="#001eff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_color"
+        app:layout_constraintStart_toEndOf="@+id/tv_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_color"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <Button
+        android:id="@+id/btn_green"
+        android:layout_width="60dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/color_green"
+        android:textSize="11sp"
+        android:textColor="#00a86b"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_blue"
+        app:layout_constraintTop_toTopOf="@+id/btn_blue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/numberscope"
+        app:layout_constraintStart_toEndOf="@+id/ev_numberscope"
+        app:layout_constraintTop_toBottomOf="@+id/Intro_tv" /> -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
